@@ -1,5 +1,4 @@
 const std = @import("std");
-const os = std.os.linux;
 const print = std.debug.print;
 const cf = @import("config.zig");
 
@@ -18,7 +17,6 @@ pub fn readFile() !void {
     );
     defer std.posix.munmap(data);
 
-    // var ln: usize = 0;
     var iter = std.mem.splitScalar(u8, data, '\n');
 
     print("{any}", .{processFile(&iter)});
