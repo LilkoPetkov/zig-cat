@@ -1,10 +1,9 @@
 const std = @import("std");
 const cli = @import("cli");
-const print = std.debug.print;
 const cat_zig = @import("cat_zig");
 const rf = @import("read_file.zig");
 const cf = @import("config.zig");
-const Allocator = std.mem.Allocator;
+const print = std.debug.print;
 
 pub fn main() !void {
     var r = try cli.AppRunner.init(std.heap.page_allocator);
